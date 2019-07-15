@@ -1,0 +1,23 @@
+распаковка архива в директорию c:/mysql
+создание папки c:/mysql/data
+создание конвигурационного файла c:/mysql/my.ini
+___________
+[mysqld]
+
+basedir=C:\mysql
+datadir=C:\mysql\data
+___________________
+инициализация data
+зайти через консоль 
+c:/mysql/bin\mysqld --initialize --console
+скопировать password из папки /data Константин.err
+
+запуск с другой консоли 
+mysql -u root -h localhost -p (скопированный пароль)
+
+зайдя в базу 
+<mysql> alter user 'root'@'localhost' indentified by 'newpassword'
+<mysql> exit
+
+перезайти с новым паролем
+mysql -u root -h localhost -p newpassword;
